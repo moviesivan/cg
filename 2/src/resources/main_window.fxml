@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <center>
+      <AnchorPane fx:id="canvasHolder" prefHeight="480.0" prefWidth="480.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox prefWidth="320.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Height" />
+                        <Slider fx:id="Height" majorTickUnit="40.0" max="400.0" minorTickCount="4" prefHeight="40.0" prefWidth="260.0" showTickLabels="true" showTickMarks="true" value="300.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Sides" />
+                        <Slider fx:id="Sides" majorTickUnit="1.0" max="12.0" min="3.0" minorTickCount="4" prefHeight="40.0" prefWidth="260.0" showTickLabels="true" showTickMarks="true" value="4.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Radius" />
+                        <Slider fx:id="Radius" majorTickUnit="40.0" max="400.0" min="0.0" minorTickCount="4" prefHeight="40.0" prefWidth="260.0" showTickLabels="true" showTickMarks="true" value="200.0" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

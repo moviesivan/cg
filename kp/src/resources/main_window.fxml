@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <center>
+      <AnchorPane fx:id="canvasHolder" prefHeight="480.0" prefWidth="480.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox prefWidth="320.0">
+               <children>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Point 1 X" />
+                        <TextField fx:id="p1X" prefHeight="25.0" prefWidth="40.0" />
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" text="Y" />
+                        <TextField fx:id="p1Y" prefHeight="25.0" prefWidth="40.0" />
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" text="Z" />
+                        <TextField fx:id="p1Z" prefHeight="25.0" prefWidth="40.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Point 2 X" />
+                        <TextField fx:id="p2X" prefHeight="25.0" prefWidth="40.0" />
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" text="Y" />
+                        <TextField fx:id="p2Y" prefHeight="25.0" prefWidth="40.0" />
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" text="Z" />
+                        <TextField fx:id="p2Z" prefHeight="25.0" prefWidth="40.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Point 3 X" />
+                        <TextField fx:id="p3X" prefHeight="25.0" prefWidth="40.0" />
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" text="Y" />
+                        <TextField fx:id="p3Y" prefHeight="25.0" prefWidth="40.0" />
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" text="Z" />
+                        <TextField fx:id="p3Z" prefHeight="25.0" prefWidth="40.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                     <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Point 4 X" />
+                     <TextField fx:id="p4X" prefHeight="25.0" prefWidth="40.0" />
+                     <Label alignment="TOP_LEFT" prefHeight="40.0" text="Y" />
+                     <TextField fx:id="p4Y" prefHeight="25.0" prefWidth="40.0" />
+                     <Label alignment="TOP_LEFT" prefHeight="40.0" text="Z" />
+                     <TextField fx:id="p4Z" prefHeight="25.0" prefWidth="40.0" />
+                     </children>
+                  </HBox>
+                  <Button fx:id="upd" mnemonicParsing="false" text="Update" />
+                  
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Step" />
+                        <Slider fx:id="Step" majorTickUnit="2.0" max="50.0" min="3.0" minorTickCount="4" prefHeight="40.0" prefWidth="260.0" showTickLabels="true" showTickMarks="true" value="4.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Angle" />
+                        <Slider fx:id="Angle" majorTickUnit="30.0" max="360.0" min="0.0" minorTickCount="10" prefHeight="40.0" prefWidth="260.0" showTickLabels="true" showTickMarks="true" value="60.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="70.0" text="Coordinates:" />
+                        <CheckBox fx:id="X" mnemonicParsing="false" text="X" />
+                        <CheckBox fx:id="Y" mnemonicParsing="false" text="Y" />
+                        <CheckBox fx:id="Z" mnemonicParsing="false" text="Z" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

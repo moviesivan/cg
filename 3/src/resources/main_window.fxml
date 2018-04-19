@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MainController">
+   <center>
+      <AnchorPane fx:id="canvasHolder" prefHeight="600.0" prefWidth="480.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <VBox prefWidth="320.0">
+               <children>
+                  <Label alignment="TOP_CENTER" prefHeight="22.0" prefWidth="311.0" text="x^2/a^2+y^2/a^2-z^2/c^2=-1" textAlignment="CENTER" />
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="a" />
+                        <Slider fx:id="parama" majorTickUnit="3.0" max="50.0" min="1.0" minorTickCount="4" prefHeight="40.0" prefWidth="260.0" showTickLabels="true" showTickMarks="true" value="20.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="c" />
+                        <Slider fx:id="paramc" majorTickUnit="3.0" max="50.0" min="5.0" minorTickCount="4" prefHeight="40.0" prefWidth="260.0" showTickLabels="true" showTickMarks="true" value="21.0" />
+                     </children>
+                  </HBox>
+                  <HBox>
+                     <children>
+                        <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Step" />
+                        <Slider fx:id="paramStep" majorTickUnit="3.0" max="48.0" min="3.0" minorTickCount="4" prefHeight="40.0" prefWidth="260.0" showTickLabels="true" showTickMarks="true" value="21.0" />
+                     </children>
+                  </HBox>
+                  <VBox>
+                     <children>
+                        <HBox>
+                           <children>
+                              <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="60.0" text="Ambient" />
+                              <VBox>
+                                 <children>
+                                    <HBox>
+                                       <children>
+                                          <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Red" />
+                                          <Slider fx:id="paramLightARed" majorTickUnit="0.1" max="1.0" prefHeight="40.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.5" />
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Green" />
+                                          <Slider fx:id="paramLightAGreen" majorTickUnit="0.1" max="1.0" prefHeight="40.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.5" />
+                                       </children>
+                                    </HBox>
+                                    <HBox>
+                                       <children>
+                                          <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Blue" />
+                                          <Slider fx:id="paramLightABlue" majorTickUnit="0.1" max="1.0" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.5" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="60.0" text="Diffuse" />
+                                    <VBox>
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Red" />
+                                                <Slider fx:id="paramLightDRed" majorTickUnit="0.1" max="1.0" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.2" />
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Green" />
+                                                <Slider fx:id="paramLightDGreen" majorTickUnit="0.1" max="1.0" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.2" />
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Blue" />
+                                                <Slider fx:id="paramLightDBlue" majorTickUnit="0.1" max="1.0" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.2" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                        <HBox>
+                           <children>
+                              <HBox>
+                                 <children>
+                                    <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="60.0" text="Specular" />
+                                    <VBox>
+                                       <children>
+                                          <HBox>
+                                             <children>
+                                                <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Red" />
+                                                <Slider fx:id="paramLightSRed" majorTickUnit="0.1" max="1.0" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.3" />
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Green" />
+                                                <Slider fx:id="paramLightSGreen" majorTickUnit="0.1" max="1.0" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.3" />
+                                             </children>
+                                          </HBox>
+                                          <HBox>
+                                             <children>
+                                                <Label alignment="TOP_LEFT" prefHeight="40.0" prefWidth="48.0" text="Blue" />
+                                                <Slider fx:id="paramLightSBlue" majorTickUnit="0.1" max="1.0" prefHeight="38.0" prefWidth="200.0" showTickLabels="true" showTickMarks="true" value="0.3" />
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets top="2.0" />
+                     </padding>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+
+   </right>
+   <bottom>
+
+   </bottom>
+</BorderPane>
