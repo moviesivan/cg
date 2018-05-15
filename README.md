@@ -1,1 +1,1 @@
-# Computer Grachics uni tasks
+# Computer Graphics uni tasks
